@@ -1,0 +1,689 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --color-1: #455b51;
+  --color-2: #13291f;
+  --color-3: #eef5f2;
+  --color-text-1: #444;
+  --color-text-2: #fff;
+}
+
+body,
+h1,
+h2,
+h3,
+h4 {
+  background-image: url("images/calculator-1680905_1920.jpg");
+  color: var(--color-text-1);
+  font-family: "Poppins", sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* 
+Header
+*/
+
+header {
+  background-color: var(--color-1);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0px;
+}
+
+header .logo {
+  width: 90%;
+  position: relative;
+  padding-left: 10%;
+  max-height: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+header .logo img {
+  width: 80px;
+}
+
+header .logo span {
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 10px;
+  color: var(--color-text-2);
+}
+
+header .notification {
+  width: 10%;
+  height: 100%;
+  position: relative;
+  padding-right: 15%;
+  max-height: 100%;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+}
+
+header .notification i {
+  font-size: 25px;
+  color: var(--color-text-2);
+  cursor: pointer;
+}
+
+header .notification .notify::after {
+  position: absolute;
+  top: 20%;
+  left: 15px;
+  content: "";
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #a35b5b;
+  border-radius: 100%;
+  color: var(--color-text-2);
+  cursor: pointer;
+}
+
+/* 
+Tableau
+*/
+
+#myUL {
+  list-style: none;
+  padding: 0px;
+}
+
+section .myLI {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  min-width: 20%;
+  max-width: 100%;
+  min-height: 30px;
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
+
+section {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 80px;
+}
+
+section .gestion {
+  border: var(--color-1) solid 3px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: white;
+  opacity: 0.9;
+}
+
+section .gestion .headerGestion {
+  background-color: var(--color-1);
+  height: 40px;
+  overflow-x: auto;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-2);
+  text-transform: uppercase;
+}
+
+section .gestion .headerGestion .editHeader {
+  min-width: 5%;
+  max-width: 5%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .nameHeader {
+  min-width: 28%;
+  max-width: 28%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .amountHeader {
+  min-width: 15%;
+  max-width: 15%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .typeHeader {
+  min-width: 15%;
+  max-width: 15%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .typeHeader {
+  min-width: 8%;
+  max-width: 8%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .buyHeader {
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .sellHeader {
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .margeHeader {
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .saleHeader {
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  border-right: var(--color-text-2) 2px solid;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .headerGestion .removeHeader {
+  min-width: 3%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.addItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.addItem span {
+  font-size: 200px;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  color: var(--color-1);
+}
+
+/*
+Contenu du Tableau
+*/
+
+section .gestion .editList {
+  min-width: 5%;
+  max-width: 5%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .nomList {
+  min-width: 28%;
+  max-width: 28%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .qteList {
+  min-width: 15%;
+  max-width: 15%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .selectList {
+  min-width: 8%;
+  max-width: 8%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .achatHTList {
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .venteHTList {
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .margeList {
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .prixTTCList {
+  min-width: 9%;
+  max-width: 9%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .gestion .deleteButton {
+  min-width: 4%;
+  min-height: 30px;
+  padding: 0% 1% 0% 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+section .gestion .nomList input {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: medium;
+}
+
+section .gestion .qteList input {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: medium;
+}
+
+section .gestion .selectList select {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: medium;
+}
+
+section .gestion .achatHTList input {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: medium;
+}
+
+section .gestion .venteHTList input {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: medium;
+}
+
+/*
+Notice box pour les notifications
+*/
+
+.notice .boxNotice {
+  position: absolute;
+  top: 8%;
+  right: 13%;
+  width: 20%;
+  height: auto;
+  background-color: var(--color-text-2);
+  border-radius: 15px;
+  filter: drop-shadow(0px 0px 5px var(--color-text-1));
+  padding: 0px 20px;
+}
+
+.notice .boxNotice ul {
+  list-style: none;
+}
+
+.notice .boxNotice .newNotice {
+  text-align: justify;
+  border-bottom: rgba(110, 110, 110, 0.3) 1px solid;
+  padding-bottom: 10px;
+}
+
+.notice .boxNotice .newNotice::before {
+  position: absolute;
+  left: 25px;
+  content: "×";
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  border: 0px;
+  border-radius: 10px;
+  border: 0px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #4fd95a;
+  border-color: #4fd95a;
+  border: 0px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  border: 0px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+/** ajout barre sous mon titre principal */
+hr {
+  border: 4px solid black;
+  box-shadow: 2px 2px 2px 0 var(--color-3);
+  margin-bottom: 50px;
+}
+
+/** style du formulaire */
+form {
+  line-height: 2em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form div.form-input {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+form div.form-input label {
+  margin: 0px;
+  padding: 0px;
+  width: 50%;
+  position: relative;
+}
+
+form div.form-input input {
+  margin: 0px;
+  padding: 0px;
+  width: 50%;
+  position: relative;
+}
+
+form div.form-input select {
+  margin: 0px;
+  padding: 0px;
+  width: 50%;
+  position: relative;
+}
+
+form div > label {
+  color: var(--color-1);
+}
+
+/** style de mes inputs */
+input[type="text"] {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid var(--color-1);
+  padding-left: 10px;
+  box-shadow: 2px 2px 2px 0 var(--color-3);
+}
+
+select {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid var(--color-1);
+  padding-left: 10px;
+  box-shadow: 2px 2px 2px 0 var(--color-3);
+}
+
+.buttonAdd {
+  width: 35%;
+  padding: 1em;
+  border: none;
+  background-color: var(--color-1);
+  font-size: 1em;
+  color: var(--color-text-2);
+  font-family: "Sanchez", serif;
+  text-transform: uppercase;
+  float: right;
+  box-shadow: 2px 2px 2px 0 var(--color-3);
+  transition: all 0.3s ease-in-out;
+  margin: 5% 0;
+}
+
+.buttonAdd:hover {
+  background-color: var(--color-text-2);
+  border: 1px solid var(--color-text-2);
+  border-bottom: 6px solid var(--color-1);
+  color: var(--color-2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container-formulaire {
+  display: flex;
+  justify-content: center;
+}
+
+.form-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#qrcode {
+  display: flex;
+  justify-self: end;
+}
+
+.qrcode-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 450px;
+  background-color: var(--color-text-2);
+  padding: 20px;
+  position: relative;
+  animation: visible 1s 1;
+  animation-fill-mode: forwards;
+  border-radius: 5px;
+}
+
+.modal-content-qrcode {
+  width: fit-content;
+  background-color: var(--color-text-2);
+  padding: 20px;
+  position: relative;
+  animation: visible 1s 1;
+  animation-fill-mode: forwards;
+  border-radius: 5px;
+}
+
+@keyframes visible {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.content-wrapper {
+  opacity: 0;
+  animation: toRight 1s 500ms;
+  animation-fill-mode: forwards;
+}
+
+.closeQR {
+  cursor: pointer;
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  align-self: center;
+}
+
+.content-wrapper-qrcode {
+  opacity: 0;
+  animation: toRight 1s 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.close {
+  position: absolute;
+  font-size: 30px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.close:hover {
+  transform: rotate(-45deg) scale(1.3);
+}

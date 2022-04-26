@@ -1,0 +1,153 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+  <title>Cafe de la Place</title>
+</head>
+
+<body>
+  <!-- START: code by reynan -->
+  <!-- Header -->
+
+  <header>
+    <!-- Logo -->
+
+    <div class="logo">
+      <img src="images/logo.png" alt="Café de la Place" />
+      <span>Café de la Place - Gestion du Stockage</span>
+    </div>
+
+    <!-- Notification -->
+
+    <div class="notification hidden" id="notification">
+      <i class="bx bx-world" id="btnNotice"></i>
+    </div>
+  </header>
+
+  <!-- Section du Tableau -->
+
+  <section>
+    <!-- Header Tableau-->
+
+    <div class="gestion" id="gestion">
+      <div class="headerGestion">
+        <div class="editHeader"></div>
+        <div class="nameHeader">Nom</div>
+        <div class="amountHeader">Quantité</div>
+        <div class="typeHeader">Type</div>
+        <div class="buyHeader">Achat HT</div>
+        <div class="sellHeader">Vente HT</div>
+        <div class="margeHeader">Marge</div>
+        <div class="saleHeader">Vente TTC</div>
+        <div class="removeHeader"></div>
+      </div>
+
+      <!-- List vers JS-->
+
+      <ul id="myUL"></ul>
+
+      <!-- Ajouter nouveau Item -->
+
+      <div class="addItem">
+        <span id="btnPlusItem">+</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section des notifications -->
+
+  <section class="notice hidden" id="notice">
+    <div class="boxNotice" id="boxNotice">
+      <ul id="newsUL">
+        <li class="newNotice">Agora eu quero é botar meu bloco na rua</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- END: code by reynan -->
+
+  <!-- START: code by hanene -->
+  <!--section formulaire !-->
+  <section>
+    <!--formulaire pour les information a saisir avant ajout dans le formulaire du stock-->
+    <div class="container-formulaire">
+      <div class="form-modal">
+        <div class="modal-content">
+          <div class="content-wrapper">
+            <div class="close">+</div>
+
+            <form class="formulaire-produit">
+              <div class="produitDiv">
+                <div class="form-input">
+                  <label for="titre">Nom du Produit</label>
+                  <input type="text" name="titre" id="titre" value="" placeholder="Coca-cola" required />
+                </div>
+
+                <div class="form-input">
+                  <label for="qte">Quantité</label>
+                  <input type="text" name="qte" id="qte" value="" placeholder="de 1 à 1000 unités" />
+                </div>
+
+                <div class="form-input" name="type-produit" value="" placeholder="Type de produit">
+                  <label for="ref">Type du Produit</label>
+                  <select name="ref" class="type-produit" id="typeProduit" onchange="montreDegre()">
+                    <option value="BNA" class="bna">
+                      Boisson Non Alcoolisé
+                    </option>
+                    <option value="BA" class="ba">Boisson Alcoolisé</option>
+                    <option value="AUTRES" class="autres">Autres</option>
+                  </select>
+                </div>
+
+                <div class="form-input hidden" id="degre">
+                  <label for="ref">Degre d'Alcool</label>
+                  <input type="text" name="degrechoix" id="ref1" value="" placeholder="3%" required />
+                </div>
+
+                <div class="form-input">
+                  <label for="prix">Prix d'Achat HT</label>
+                  <input type="text" name="achatHT" id="prix" value="" placeholder="ex. 00.00€" />
+                </div>
+
+                <div class="form-input">
+                  <label for="prixTTC">Prix de Vente HT</label>
+                  <input type="text" name="venteHT" id="prixTTC" value="" placeholder="ex. 00.00€" />
+                </div>
+
+                <button type="button" name="product" id="product" onclick="ajouterProduit()" class="buttonAdd">
+                  AJOUT
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+
+    <div class="qrcode-modal">
+      <div class="modal-content-qrcode">
+        <div class="content-wrapper-qrcode">
+          <div class="close">+</div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- END: code by hanene -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
